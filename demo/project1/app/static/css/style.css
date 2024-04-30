@@ -1,0 +1,65 @@
+.part1 img,h1{
+    width: 100%;
+    text-align: center;position: relative;top: 80px;
+ }
+ .part2 h1{
+    position: relative;top: 10px;
+ }
+ .part2 p,img{
+    text-align: center;
+    width: 100%;
+ }
+ .part2 h3{
+    text-align: center;
+ }
+ .part3{
+    background-color: rgb(35, 110, 81);
+ }
+ .part3 img{
+    width: 100px;
+ }
+ .part3 h1,p{
+    position: relative;top: 10px;
+    text-align: center;
+ }
+ .part4 text{
+    text-align: center;
+ }
+ .part4  text,p{
+    position: relative;top: 10px;
+    text-align: center;
+ }
+ .part6 h1{
+     text-align: center;
+     position: relative;top: 10px;
+ }
+ .part6-1 img{
+    width: 50px;
+ }
+ .part5 h1{
+    position: relative;top: 10px;
+ }
+ .part5-1{
+    position: relative;left: 500px;
+ }
+ 
+ .part7{
+    background-color: thistle;
+ }
+ .part8 h2{
+       text-align: center;
+ }
+ .center img{
+    display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 50%;
+ 
+ }
+ .part1-2{
+    /* background-color:rgb(146, 144, 144) ; position: relative; left: 1000px; */
+    width: 10px; height: 30px
+ }
+ .nav ul li {
+   float:left;
+ }
