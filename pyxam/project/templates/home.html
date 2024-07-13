@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <a class="nav-bar" href="{% url 'home'  %}">home</a>
+        <a class="nav-bar" href="{% url 'datas' %}">datas</a>
+        <a class="nav-bar" href="{% url 'forms' %}">forms</a>
+    </nav>
+    
+    <div class="conainer">
+        <div class="row">
+            {% for item in detail %}
+            <div class="col" style="border:solid;">
+            <input type='hidden' ID={{item.id}}></button> 
+               <a href="{% url 'datas' %}">
+                <img src='{{item.img.url}}' style="width:90px;height:120px" ></a>
+               <h3 >{{item.name}}</h3>
+                <p>{{item.email}}</p>         
+            </i>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
