@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+</head>
+<body>
+    <nav>
+        <a class='nav-bar' href={% url 'home' %}>home</a>
+        <a class='nav-bar' href={% url 'register' %}>register</a>
+        <a class='nav-bar' href={% url 'login' %}>login</a>
+        {% if user.is_authenticated %}
+        <a class='nav-bar' href={% url 'logout' %}>logout</a>
+        <a class='nav-bar' href={%url 'forms' %}>forms</a>
+        <a class='nav-bar' href={%url 'details' %}>details</a>
+        {% endif %}
+    </nav>
+    <p>hello {{user}}..</p>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>details</title>
+  <link rel="stylesheet" href="static/detail_sty.css">
+</head>
+<body>
+
+  <a href={% url 'form' %}>Form</a>
+  <a href={% url 'home' %}>Home</a>
+  <a href={% url 'details' %}>details</a>
+  <br>
+
+
+  {% for frm in Form %}
+  <div class ="border"> 
+    <a href="{% url 'person' frm.id %}"><img src='{{frm.image.url}}' style="width:50px;"> </a>
+    name:{{frm.name}}
+    <p>email:{{frm.email}}</p>
+    {% comment %} age:{{frm.age}}
+    place:{{frm.place}}
+    email:{{frm.email}}
+    phone:{{frm.phone}} {% endcomment %}
+  </div>
+  {% endfor %}
+
+
+</body>
+</html>

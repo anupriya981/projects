@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data</title>
+</head>
+<body>
+    <a class='nav-bar' href={% url 'home' %}>home</a>
+    <a class='nav-bar' href={% url 'register' %}>register</a>
+    <a class='nav-bar' href={% url 'login' %}>login</a>
+    <a class='nav-bar' href={%url 'details' %}>details</a>
+
+<form method='POST' enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p}}  
+    <input type='submit' value="submit">
+</form>
+
+{% for message in messages %}
+ <p>{{message}}</p>
+{% endfor %}
+    
+</body>
+</html>   

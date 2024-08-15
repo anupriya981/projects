@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+</head>
+<body>
+    <nav>
+        <a class='nav-bar' href={% url 'home' %}>home</a>
+        <a class='nav-bar' href={% url 'register' %}>register</a>
+        <a class='nav-bar' href={% url 'login' %}>login</a>
+        <a class='nav-bar' href={%url 'forms' %}>forms</a>
+
+    </nav>
+    
+    <h1>users</h1>
+{% if user.is_authenticated %}
+   
+<img src = "{{info.image.urls}}">
+    <table> 
+        <tr><th>name</th>
+            <th>place</th>
+            <th>email</th>
+            <th>phone</th>
+            <th>age</th>
+            <th>edit</th>
+            <th>delete</th>
+            {% for info in user_details %}
+            <tr>
+                <td>{{info.name}} </td>
+                <td>{{info.place}} </td>
+                <td>{{info.email}} </td>
+                <td>{{info.phone}} </td>
+               <td> {{info.age}} </td>
+               <td><a href="{% url 'edit' info.id %}">edit</a></td>
+               <td><a href="{% url 'delete' info.id %}">delete</a></td>
+            </tr>
+    {% endfor %}
+    </table>
+{% endif %}
+</body>
+</html>
